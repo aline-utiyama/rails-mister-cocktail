@@ -1,0 +1,30 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/09/bd/7a/09bd7ac01ac90ceee999e4e5d0e8ce06.jpg);">
+  <div class="container">
+    <h1>Customize your drinks</h1>
+    <p>And have fun!</p>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1>Cocktails</h1>
+
+  <%= link_to 'Create Cocktail', new_cocktail_path , class: 'btn btn-primary' %>
+  <br>
+  <div class="row justify-content-between my-5">
+    <% @cocktails.each do |cocktail| %>
+      <!-- <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2> -->
+      <div class="card-product">
+        <img src="https://lh3.googleusercontent.com/proxy/XLUdBl1K2j_wcxbK8mtsD1JSBekOgiwXpI7hak_uClCCHbTfmxl7pHHnI1lM35DKthx2FNhb5aS1YLSUhX_YKlg0WEAK6ncTuJx0miQsUuVh3M91jhasAQYbQZy7nh1tblCoDcU" />
+        <div class="card-product-infos">
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+
+
+</div>
+
