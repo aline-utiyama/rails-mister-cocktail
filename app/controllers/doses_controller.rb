@@ -2,6 +2,7 @@ class DosesController < ApplicationController
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new
+    @ingredients = Ingredient.where.not(id: @cocktail.ingredients)
   end
 
   def create
