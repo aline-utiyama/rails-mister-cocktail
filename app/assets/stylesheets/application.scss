@@ -151,7 +151,7 @@
 }
 
 .ingredient-card {
-  padding: 8px 24px;
+  padding: 16px 24px;
   background-color: #fff;
   border-radius: 0 16px 16px 0;
   width: 320px;
@@ -166,4 +166,8 @@
 
 .cocktail-card-show img {
   border-radius: 16px 0 0 16px;
+}
+
+.navbar-brand {
+  font-size: 28px;
 }
