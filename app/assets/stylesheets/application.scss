@@ -28,6 +28,7 @@
   background-position: center;
   padding: 150px 0;
   height: 550px;
+  margin-top: 50px;
 }
 
 .banner h1 {
@@ -78,6 +79,7 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
+  margin: 24px;
 
 }
 
@@ -106,13 +108,62 @@
 }
 
 #list-title {
-  padding: 24px;
+  padding-top: 36px;
   text-align: center;
   color: #ff9f1c;
 }
 
-
-
 .main-nav {
   background-color: #fff;
+}
+
+.footer {
+  background-color: #cbf3f0;
+  height: 240px;
+}
+
+#social-icons {
+  display: inline-block;
+  list-style-type: none;
+  color: #ff9f1c;
+  text-align: center;
+  font-size: 32px;
+  padding-top: 48px;
+  display: flex;
+  justify-content: center;
+
+  li {
+    padding: 0 16px;
+  }
+}
+
+
+.cocktail-form {
+  margin-top: 80px;
+}
+
+.dose-form {
+  margin-top: 80px;
+}
+
+.cocktail-page {
+  margin-top: 80px;
+}
+
+.ingredient-card {
+  padding: 8px 24px;
+  background-color: #fff;
+  border-radius: 0 16px 16px 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cocktail-card-show {
+  border-radius: 8px;
+}
+
+.cocktail-card-show img {
+  border-radius: 16px 0 0 16px;
 }

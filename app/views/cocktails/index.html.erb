@@ -9,17 +9,29 @@
 <div class="list">
   <h1 id="list-title">Cocktails</h1>
   <div class="main-list">
-    <div class="row justify-content-between my-5">
+    <div class="row justify-content-around my-5">
       <% @cocktails.each do |cocktail| %>
         <!-- <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2> -->
         <div class="card-product">
           <img src="<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>" />
           <div class="card-product-infos">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+            <ul>
+              <% cocktail.ingredients.each do |ingredient| %>
+              <li><%= ingredient.name %></li>
+              <% end %>
+            </ul>
           </div>
         </div>
       <% end %>
     </div>
   </div>
+</div>
+
+<div class="footer">
+  <ul id="social-icons">
+    <li><i class="fab fa-facebook"></i></li>
+    <li><i class="fab fa-instagram"></i></li>
+  </ul>
 </div>
 

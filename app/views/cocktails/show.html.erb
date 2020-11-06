@@ -1,15 +1,19 @@
-<div class="container">
-  <h1>Cocktail</h1>
+<div class="container cocktail-page">
   <h2><%= @cocktail.name %></h2>
-  <img src="<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>" />
-  <% @cocktail.doses.each do |dose| %>
-    <%= dose.ingredient.name %>
-    <%= dose.description %>
-    <br>
-    <%= link_to 'Delete', dose_path(dose), method: :delete, class: 'text-danger'%>
-    <br>
-  <% end %>
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail)  %>
-  <br>
-  <%= link_to 'Back to cocktails list', cocktails_path %>
+  <div class="row cocktail-card-show">
+    <img src="<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>" />
+    <div class="ingredient-card">
+      <div class="align-items-start flex-column">
+        <h3>Ingredients</h3>
+        <% @cocktail.doses.each do |dose| %>
+          <ul>
+            <li><%= dose.ingredient.name %>: <%= dose.description %> <%= link_to 'Delete', dose_path(dose), method: :delete, class: 'text-danger'%> </li>
+          </ul>
+        <% end %>
+      </div>
+      <div class="align-items-end flex-column">
+        <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) , class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
 </div>
