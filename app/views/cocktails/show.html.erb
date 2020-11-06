@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Cocktail</h1>
   <h2><%= @cocktail.name %></h2>
+  <img src="<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>" />
   <% @cocktail.doses.each do |dose| %>
     <%= dose.ingredient.name %>
     <%= dose.description %>
